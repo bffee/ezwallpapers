@@ -1,0 +1,95 @@
+<div class="usersInfoCards">
+    <div class="totalUsersCard">
+        <span><i class="fa-solid fa-users"></i>Total Users</span>
+        <h2><%=totalUsers %> </h2>
+    </div>
+    <div class="newUsersCard">
+        <span><i class="fa-solid fa-user-plus"></i>New Users</span>
+        <h2><%=newUsers %> </h2>
+    </div>
+    <div class="activeUsersCard">
+        <span><i class="fa-solid fa-user-check"></i>Active Users</span>
+        <h2><%=activeUsers %> </h2>
+    </div>
+    <div class="suspendedUsersCard">
+        <span><i class="fa-solid fa-user-xmark"></i>Suspended Users</span>
+        <h2><%=suspendedUsers %> </h2>
+    </div>
+</div>
+
+<div class="usersTable">
+    <div class="usersTableHeader">
+        <div class="usersTableOptions">
+            <h3>Registered Users</h3>
+            <div class="usersTableSearchBox">
+                <button type="button" class="user-search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" name="search" class="user-search-input" placeholder="Search User" autocomplete="off">
+            </div>
+        </div>
+        <div class="usersTableHeadings">
+            <span class="userProfile">Name</span>
+            <span class="userRole">Role</span>
+            <span class="userStatus">Status</span>
+            <span class="userReports">Reports</span>
+        </div>
+    </div>
+    <div class="usersTableBody">
+        <% users.forEach(user => { %>
+            <div class="usersTableRow">
+                <div class="userProfile">
+                    <img class="user-popup-card" username="<%=user.username %>" src="<%=user.profilePicture %> " alt="">
+                    <span class="user-popup-card" username="<%=user.username %>"><%=`${user.fname} ${user.lname}` %> </span>
+                </div>
+                <div class="userRole">
+                    <%if(user.privilege === 'admin'){ %>
+                        <span class="admin-color"><%=user.privilege %></span>
+                    <%}else{%> 
+                        <span class="user-color"><%=user.privilege %></span>
+                    <%}%> 
+                </div>
+                <div class="userStatus">
+                    <%if(user.state == 'suspended'){%> 
+                        <span class="suspended"><%=user.state %></span>
+                    <%}else if(user.state == 'deleted'){%> 
+                        <span class="deleted"><%=user.state %></span>
+                    <%}else{%>
+                        <span class="active"><%=user.state %></span>
+                    <%}%> 
+                </div>
+                <div class="userReports">
+                    <% if(user.reports > 0 && user.reports <= 5){ %>
+                        <span class="abnormal view-user-reports" username="<%=user.username %> "><%=user.reports %> </span>
+                    <%}else if(user.reports > 5 && user.reports <= 10){%> 
+                        <span class="unsafe view-user-reports" username="<%=user.username %> "><%=user.reports %> </span>
+                    <%}else if(user.reports >= 10){%> 
+                        <span class="danger view-user-reports" username="<%=user.username %> "><%=user.reports %> </span>
+                    <%}else{%>
+                        <span class="safe view-user-reports" username="<%=user.username %> "><%=user.reports %> </span> 
+                    <%}%> 
+                    <!-- <a href=""><i class="fa-solid fa-pen-to-square"></i></a> -->
+                    <!-- <span class="promote-user"><i class="fa-solid fa-user-gear"></i></span>
+                    <span class="view-reports"><i class="fa-solid fa-flag"></i></span>
+                    <span class="suspend-user"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <span class="delete-user"><i class="fa-solid fa-trash-can"></i></span> -->
+                </div>
+            </div>
+        <% }); %> 
+        
+    </div>
+    <!-- <div class="bottomPadding"></div> -->
+</div>
+
+<div class="usersCharts">
+    <div class="rolesChartCard">
+        <div class="rolesChartHeadings"></div>
+        <div class="rolesChartBox">
+            <canvas id="rolesChart"></canvas>
+        </div>
+    </div>
+    <div class="usersChartCard">
+        <div class="usersChartHeadings"></div>
+        <div class="usersChartBox">
+            <canvas id="usersChart"></canvas>
+        </div>
+    </div>
+</div>

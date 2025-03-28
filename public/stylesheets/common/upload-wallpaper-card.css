@@ -1,0 +1,196 @@
+/* Upload Wallpaper Card */
+.upload-wallpaper-card {
+    width: 400px;
+    background-color: var(--primary-colour);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1111;
+    display: none;
+}
+
+/* Wallpaper Upload Box */
+.upload-wallpaper-box {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: var(--hover-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-wallpaper-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures full wallpaper is visible */
+    display: none;
+}
+
+.upload-wallpaper-box input {
+    display: none;
+}
+
+.upload-wallpaper-btn {
+    position: absolute;
+    background-color: var(--primary-colour);
+    color: var(--secondry-color);
+    padding: 8px 12px;
+    border-radius: var(--element-border-radius);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.upload-wallpaper-btn > i{
+    margin-right: 0.2rem;
+}
+
+.upload-wallpaper-btn:hover{
+    opacity: 0.8;
+}
+
+/* Form Fields */
+.upload-wallpaper-form-group {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.upload-wallpaper-card label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondry-color);
+}
+
+.upload-wallpaper-card input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid var(--hover-colour);
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    background-color: var(--hover-colour);
+    color: var(--secondry-color);
+}
+
+/* Tags Input */
+.upload-wallpaper-category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: 1px solid var(--hover-colour);
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    min-height: 40px;
+    height: 3rem;
+    cursor: text;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.upload-wallpaper-category-container::-webkit-scrollbar{
+    width: 0;
+}
+
+/* Tags Container */
+.upload-wallpaper-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+
+/* Individual Tag */
+.upload-wallpaper-tag {
+    background-color: var(--hover-colour);
+    color: var(--secondry-color);
+    padding: 5px 8px;
+    border-radius: var(--element-border-radius);
+    margin-bottom: 3px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.upload-wallpaper-tag span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Editable Input for New Tags */
+.upload-wallpaper-category-input {
+    min-width: 100px;
+    flex-grow: 1;
+    outline: none;
+    color: var(--secondry-color);
+}
+
+/* Upload Button */
+.upload-wallpaper-submit-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--hover-colour);
+    color: var(--secondry-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.upload-wallpaper-card-close-button{
+    position: absolute;
+    top: 0.5%;
+    right: 2%;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--secondry-hover-color);
+}
+
+.upload-wallpaper-card.show {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards ease-out;
+}
+
+.upload-wallpaper-card.hide {
+    animation: fadeOut 0.3s forwards ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+}
+
+@media (max-width: 426px) {
+    .upload-wallpaper-card{
+        width: 100%;
+    }
+}

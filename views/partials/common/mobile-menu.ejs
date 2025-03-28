@@ -1,0 +1,45 @@
+<div class="mobile-menu mobile-menu-open">
+    <div class="mobile-menu-header-section">
+        <h3><span>Ez</span>Wallpapers</h3>
+        <button class="mobile-menu-close-button"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="mobile-menu-main-section">
+        <h3>Main Menu</h3>
+        <a href="http://localhost:3000/">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="http://localhost:3000/explore">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <%if(user){%>
+            <a href="http://localhost:3000/profile/@<%=user.username %> ">
+                <i class="fa-solid fa-heart"></i>
+                <span>Favourite</span>
+            </a>
+        <%}else{%>
+            <a href="http://localhost:3000/auth ">
+                <i class="fa-solid fa-heart"></i>
+                <span>Favourite</span>
+            </a>
+        <%} %>   
+        <h3>More Options</h3>
+        <a href="http://localhost:3000/bug-report">
+            <i class="fa-solid fa-bug"></i>
+            <span>Bug Report</span>
+        </a>
+        <a href="http://localhost:3000/bug-report">
+            <i class="fa-solid fa-message"></i>
+            <span>Send Feedback</span>
+        </a>
+    </div>
+    <div class="mobile-menu-footer-section">
+        <%if(user){ %> 
+            <button class="mobile-menu-buttons">Logout</button>
+        <%}else{ %> 
+            <a class="mobile-menu-buttons" href="http://localhost:3000/auth">Join</a>
+            <a class="mobile-menu-buttons" href="http://localhost:3000/auth">Login</a>
+        <%} %> 
+    </div>
+</div>

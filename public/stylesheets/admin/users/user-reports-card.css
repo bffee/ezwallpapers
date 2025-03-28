@@ -1,0 +1,109 @@
+.report-card{
+    width: 400px;
+    aspect-ratio: 1/1;
+    background-color: var(--primary-colour);
+    color: var(--secondry-color);
+    border-radius: var(--element-border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1232;
+    display: none;
+    border: 1px solid var(--hover-colour);
+}
+
+.report-card-header{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.report-card-report-list {
+    flex: 1;
+    overflow-y: auto;
+    border-top: 1px solid var(--hover-colour);
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.report-card-report-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    padding: 10px;
+    border-radius: var(--element-border-radius);
+    border-bottom: 1px solid var(--hover-colour);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.report-card-report-item > i{
+    color: red;
+}
+
+.report-card-report-item:hover {
+    background: var(--hover-colour);
+}
+
+#report-card-no-reports{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+}
+
+#report-card-no-reports > i{
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+
+.report-card-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--secondry-hover-color);
+}
+
+.report-card.show {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards ease-out;
+}
+
+.report-card.hide {
+    animation: fadeOut 0.3s forwards ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+}

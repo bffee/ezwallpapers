@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/common/variables.css">
+    <link rel="stylesheet" href="/stylesheets/global.css">
+    <link rel="stylesheet" href="/stylesheets/common/header-components.css">
+    <link rel="stylesheet" href="/stylesheets/common/dropdown-menu.css">
+    <link rel="stylesheet" href="/stylesheets/admin/users/user-management.css">
+    <link rel="stylesheet" href="/stylesheets/admin/users/user-info-card.css">
+    <link rel="stylesheet" href="/stylesheets/admin/users/user-reports-card.css">
+    <link rel="stylesheet" href="/stylesheets/admin/users/report-info-card.css">
+    <title>ezwallpapers - User Management</title>
+
+</head>
+
+<body>
+    <header>
+        <%- include('partials/common/header-components', {user}); %>
+        <%- include('partials/common/dropdown-menu', {user}); %>
+    </header>
+    <main>
+        <%- include('partials/admin/users/user-management', {users, totalUsers: totalUsers.totalUsers, newUsers: newUsers.totalNewUsers, activeUsers: totalUsers.activeUsers, suspendedUsers: totalUsers.suspendedUsers}) %> 
+        <%- include('partials/admin/users/user-info-card') %> 
+        <%- include('partials/admin/users/user-reports-card') %> 
+        <%- include('partials/admin/users/report-info-card') %> 
+        <div class="backdrop"></div>
+    </main>
+
+    <script>
+        let usersData = JSON.parse('<%- JSON.stringify(users)%>')
+        let usersRoles = JSON.parse('<%- JSON.stringify(userRoles) %>')
+        let newUsers = JSON.parse('<%- JSON.stringify(newUsers.dailyData) %>')
+        // console.log(users)
+        
+        let usersMap = new Map(usersData.map(user => [user.username, user]));
+        usersRoles = Object.values(usersRoles)
+        usersRoles.shift()
+        newUsers = [...newUsers]
+    </script>
+    <script src="https://kit.fontawesome.com/00e0920e71.js" crossorigin="anonymous" defer></script>
+    <script src="/javascripts/common/dropdown-menu.js" defer></script>
+    <script src="/javascripts/admin/chart.umd.js" defer></script>
+    <script src="/javascripts/admin/users/users.js" defer></script>
+    <script src="/javascripts/admin/users/user-info-card.js" defer></script>
+    <script src="/javascripts/admin/users/report-card.js" defer></script>
+
+</body>
+
+</html>

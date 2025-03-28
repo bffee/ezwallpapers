@@ -1,0 +1,20 @@
+/* Small screens, laptops: 769px — 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 18px; /* Consistent with tablets for smaller laptops */
+    }
+}
+
+/* Desktops, large screens: 1025px — 1200px */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    html {
+        font-size: 20px; /* Slightly larger for comfortable reading on larger screens */
+    }
+}
+
+/* Extra large screens, TVs: 1201px and more */
+@media (min-width: 1201px) {
+    html {
+        font-size: 22px; /* Larger font size for extra large screens */
+    }
+}

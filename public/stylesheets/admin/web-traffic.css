@@ -1,0 +1,327 @@
+main{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.trafficChartCard {
+    width: 100%;
+    margin: 1rem 0;
+    /* height: calc(100vh - 40px); */
+    /* background: rgba(54, 162, 235, 0.2); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-colour);
+    /* border-radius: 20px; */
+    border-radius: var(--element-border-radius);
+    border: 1px solid var(--hover-colour);
+    box-shadow: rgba(36, 36, 36, 0.19) 0px 10px 20px, rgba(36, 36, 36, 0.23) 0px 6px 6px;
+}
+
+.trafficChartHeadings{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    background: var(--primary-colour);
+}
+
+.traffic-box{
+    padding: 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--secondry-color);
+    background-color: transparent;
+}
+
+.traffic-box > span:first-child{
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.trafficChartSelectorSection{
+    width: 100%;
+    padding: 1rem 1.25rem 0rem 3.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.traffic-chart-legend{
+    display: flex;
+    align-items: center;
+}
+
+.traffic-chart-legend-box{
+    display: inline-block;
+    width: 0.8rem;
+    aspect-ratio: 1/1;
+    /* background-color: rgba(77,238,234, 0.3);
+    border: 1px solid rgb(77,238,234); */
+    background-color: rgba(62, 62, 255, 0.8);
+    border: 1px solid rgb(62, 62, 255);
+    border-radius: 0.25rem;
+}
+
+.traffic-chart-legend-title{
+    font-size: 0.8rem;
+    color: var(--secondry-color);
+    padding: 0 0.3rem;
+}
+
+.traffic-chart-dropdown-menu-container{
+    width: 13%;
+    width:6.25rem;
+    text-align: center;
+    color: var(--secondry-color);
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.traffic-chart-dropdown-menu-button{
+    background-color: var(--hover-colour);
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: var(--element-border-radius);
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; */
+}
+
+.traffic-chart-dropdown-menu-button > span{
+    cursor: default;
+    margin-right: 0.3rem;
+}
+
+.traffic-chart-dropdown-menu{
+    border-radius: var(--element-border-radius);
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--hover-colour);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+.traffic-chart-dropdown-menu > span{
+    padding: 0.5rem;
+}
+
+.traffic-chart-dropdown-menu > span:last-child{
+    border-radius: var(--element-border-radius);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.traffic-chart-dropdown-menu > span:hover{
+    background-color: var(--primary-colour);
+    cursor: default;
+}
+
+
+.traffic-chart-dropdown-menu-open{
+    visibility: visible;
+}
+.traffic-chart-dropdown-menu-close{
+    visibility: hidden;
+}
+
+.trafficChartBox {
+    width: 700px;
+    width: 100%;
+    aspect-ratio: 2.25/1;
+    /* height: 400px; */
+    padding: 20px;
+    padding: 0.5rem;
+    /* padding-right: 0; */
+    /* background: white; */
+}
+
+.chartInfo {
+    width: 100%;
+    aspect-ratio: 1.85/1;
+    aspect-ratio: 2/1;
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+    border: 1px solid var(--hover-colour);
+    overflow-y: scroll;
+    color: var(--secondry-color);
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.chartInfo span{
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    cursor: default;
+}
+
+.chartInfo span > i{
+    margin-right: 0.25rem;
+}
+
+.chartInfoHeader{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--hover-colour);
+}
+
+.chartInfoHeader > span{
+    font-weight: bolder !important;
+}
+
+
+.chartInfoTableRow{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.chartInfoTableRow:hover{
+    background-color: var(--hover-colour);
+}
+
+.up{
+    color: rgba(116,238,21, 1);
+    color: rgb(0, 128, 0);
+}
+
+.down{
+    color: rgb(207, 8, 8);
+}
+
+
+.chartInfo::-webkit-scrollbar{
+    width: 0;
+}
+
+.bottomPadding{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 1.25rem;
+    background-color: var(--primary-colour);
+    z-index: 1;
+}
+
+.subCharts{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.deviceChartCard {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+    border: 1px solid var(--hover-colour);
+    box-shadow: rgba(36, 36, 36, 0.19) 0px 10px 20px, rgba(36, 36, 36, 0.23) 0px 6px 6px;
+}
+
+.deviceChartBox {
+    width: 100%;
+    padding: 1rem;
+}
+
+.routeChartCard {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+    border: 1px solid var(--hover-colour);
+    box-shadow: rgba(36, 36, 36, 0.19) 0px 10px 20px, rgba(36, 36, 36, 0.23) 0px 6px 6px;
+}
+
+.routeChartBox {
+    width: 100%;
+    aspect-ratio: 2.35/1;
+    padding: 20px;
+    padding: 0.5rem;
+}
+
+
+
+/* .chartInfo::-webkit-scrollbar-thumb{
+    background-color: var(--hover-colour);
+}
+
+.chartInfo::-webkit-scrollbar-track{
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+} */
+
+@media screen and (max-width: 770px){
+    main{
+        width: 95%;
+    }
+
+    .traffic-chart-dropdown-menu-container{
+        width: 6rem;
+    }
+    .traffic-chart-dropdown-menu-container, .traffic-chart-legend-title, .chartInfo span{
+        font-size: 0.7rem;
+    }
+    .chartInfo{
+        aspect-ratio: 1.35/1;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .subCharts{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    
+    .deviceChartCard, .routeChartCard{
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin-bottom: 1rem;
+    }
+    
+    .deviceChartBox{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main{
+        width: 98%;
+    }
+
+
+
+    .subCharts{
+        flex-direction: column;
+        margin-bottom: 0;
+        gap: 0;
+    }
+
+    .deviceChartCard, .routeChartCard{
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin-bottom: 1rem;
+    }
+
+    .deviceChartBox{
+        width: 50%;
+    }
+}

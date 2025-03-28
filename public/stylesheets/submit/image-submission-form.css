@@ -1,0 +1,105 @@
+:root{
+    --elemets-font-size: clamp(0.5rem, 1vw + 0.25rem, 1.25rem);
+    --primary-colour: #e5e4e2;
+    --secondry-color: #141414;
+    --tarnsparent-background-color: transparent; 
+    --button-border: 0.13rem solid var(--primary-colour);
+    --button-padding: 0.4rem 1.2rem;
+    --button-cursor: pointer;
+}
+
+body::after {
+    content: ""; 
+    background-image: url(../../images/icons/wallpaperbetter.com_1024x768.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100vh;
+    z-index: -1; 
+}
+
+main{
+    width: 92%;
+    margin: 5rem auto;
+}
+
+.submission-form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.submission-form > input[type="text"], textarea{
+    background-color: var(--tarnsparent-background-color);
+    color: var(--primary-colour);
+    font-size: var(--elemets-font-size);
+    outline: 0;
+    border: 0;
+    border-bottom: 0.15rem solid var(--primary-colour);
+    margin: 1rem 0.5rem;
+    padding: 0.3rem;
+}
+
+.submission-form > textarea{
+    height: 41px;
+    background-color: var(--tarnsparent-background-color);
+    color: var(--primary-colour);
+    font-size: var(--elemets-font-size);
+    outline: 0;
+    padding: 0.5rem;
+    margin: 1rem 0.5rem;
+    border: var(--button-border);
+    resize: none;
+}
+
+.submission-form > textarea::-webkit-scrollbar{
+    width: 0px;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+select{
+    color: var(--primary-colour);
+    padding: 0.3rem;
+    background-color: var(--tarnsparent-background-color);
+    font-size: var(--elemets-font-size);
+    margin: 0.5rem;
+    border: var(--button-border);
+    outline: 0;
+    cursor: var(--button-cursor);
+}
+
+select:hover{
+    color: black;
+    background-color: var(--primary-colour);
+}
+
+select > option{
+    background-color: black;
+}
+
+.card-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-colour);
+    cursor: var(--button-cursor);
+    border: var(--button-border);
+    padding: var(--button-padding);
+    font-size: var(--elemets-font-size);
+    background-color: var(--tarnsparent-background-color);
+    margin: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-button:hover{
+    background-color: var(--primary-colour);
+    color: var(--secondry-color);
+}

@@ -1,0 +1,59 @@
+<div class="box-container">
+    <img src="<%=wallpaper.source%> " alt="">
+
+    <div class="wallpaper-info-container">
+        <div class="upload-info">
+            <div class="user-info">
+                <a class="user-img" href="/profile/@<%=creator.username%>">
+                    <img id="<%=wallpaper._id%>" src="<%=creator.profilePicture %> " alt="">
+                </a>
+                <a class="user-name" href="/profile/@<%=creator.username%>"><%=`${creator.fname} ${creator.lname}`%></a>
+            </div>
+            <div class="options">
+                <button><i class="fa-solid fa-share"></i>Share</button>
+                <%if(owner){ %>
+                    <button id="edit-wallpaper"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
+                <%}else{%>
+                    <button id="report-wallpaper"><i class="fa-solid fa-circle-exclamation"></i>Report</button>
+                <%} %>   
+            </div>
+        </div>
+
+        <div class="wallpaper-details">
+            <span><i class="fa-regular fa-calendar"></i>Downlaods <%=wallpaper.downloads %> </span>
+            <span><i class="fa-solid fa-download"></i>Uploaded on <%=new Date(wallpaper.created_at).toDateString() %> </span>
+            <span><i class="fa-regular fa-circle-check"></i>Free to use under the licence of EzWallpapers</span>
+        </div>
+        
+        <button class="download-button download-button-style" wallpaper="<%=wallpaper._id%>"><i class="fa-solid fa-arrow-down"></i></button>
+
+        <div class="tags-container">
+            <%wallpaper.keywords.forEach(keyword => {%>
+                <a href="/?search=<%=keyword%>"><%=keyword%></a>
+            <%});%> 
+            <!-- <a href="">Animal</a>
+            <a href="">Eagle</a>
+            <a href="">Cute</a>
+            <a href="">Badass</a>
+            <a href="">Dangrous</a>
+            <a href="">Cool</a>
+            <a href="">Modern</a>
+            <a href="">Modest</a>
+            <a href="">Outfit</a>
+            <a href="">Cowboy</a>
+            <a href="">Fearless</a>
+            <a href="">Racist</a>
+            <a href="">Noob</a>
+            <a href="">Pro</a>
+            <a href="">Fuck</a>
+            <a href="">Hater</a>
+            <a href="">Lover</a>
+            <a href="">Something</a>
+            <a href="">Chaddi</a>
+            <a href="">Racer</a>
+            <a href="">Farmer</a>
+            <a href="">Pet</a>
+            <a href="">Nothing</a> -->
+        </div>
+    </div>
+</div>

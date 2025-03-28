@@ -1,0 +1,32 @@
+<div class="edit-profile-card">
+    <div class="edit-profile-pic">
+        <img src="/images/profile_pictures/placeholder.jpg" id="edit-profile-image" alt="Profile Picture">
+        <input type="file" id="edit-profile-file" accept="image/*">
+        <label for="edit-profile-file" class="edit-profile-upload-btn"><i class="fa-solid fa-camera-retro"></i></label>
+    </div>
+    
+    <div class="edit-profile-form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Enter first name">
+    </div>
+
+    <div class="edit-profile-form-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Enter last name">
+    </div>
+
+    <div class="edit-profile-form-group">
+        <label>Bio</label>
+        <textarea placeholder="Write something..."></textarea>
+    </div>
+
+    <div class="edit-profile-form-group">
+        <label>Categories</label>
+        <div class="edit-profile-category-container">
+            <div class="edit-profile-tags" id="edit-profile-tags-container"></div>
+            <div class="edit-profile-category-input" id="edit-profile-category-box" contenteditable="true"></div>
+        </div>
+    </div>    
+    <button class="edit-profile-save-btn">Save Changes</button>
+    <button class="edit-profile-close-button">&times;</button>
+</div>

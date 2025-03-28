@@ -1,0 +1,47 @@
+<div class="header-section">
+    <button class="side-menu-close-button"><i class="fa-solid fa-bars"></i></button>
+    <h3><span>Ez</span>Wallpapers</h3>
+</div>
+<div class="main-menu">Main Menu</div>
+<div class="main-section">
+    <a href="/" class="home">
+        <i class="fa-solid fa-house"></i><span>Home</span>
+    </a>
+    <a href="/" class="explore">
+        <i class="fa-solid fa-compass"></i><span>Explore</span>
+    </a>
+    <%if(user){ %> 
+        <a href="/profile/@<%=user.username %> " class="bookmarks">
+            <i class="fa-solid fa-heart"></i><span>Favourite</span>
+        </a>
+        <%}else{%>
+        <a href="/auth" class="bookmarks">
+            <i class="fa-solid fa-bookmark"></i><span>Bookmarks</span>
+        </a>
+    <%} %>  
+</div>
+<div class="more-options">More Options</div>
+<div class="secondry-section">
+    <a href="" class="about">
+        <i class="fa-solid fa-bug"></i><span>Bug Report</span>
+    </a>
+    <a href="" class="contact-us">
+        <i class="fa-solid fa-message"></i><span>Send Feedback</span>
+    </a>
+    <!-- <a href="" class="about">
+        <i class="fa-solid fa-users"></i><span>About</span>
+    </a>
+    <a href="" class="contact-us">
+        <i class="fa-solid fa-phone"></i><span>Contact Us</span>
+    </a>
+    <a href="" class="report-wallpaper">
+        <i class="fa-solid fa-flag"></i><span>Report Content</span>
+    </a> -->
+</div>
+<div class="footer-section">
+    <a href="" class="follow-x"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="" class="follow-instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="" class="join-discord"><i class="fa-brands fa-discord"></i></a>
+    <a href="" class="follow-youtube"><i class="fa-brands fa-youtube"></i></a>
+    <a href="" class="follow-telegram"><i class="fa-brands fa-telegram"></i></a>
+</div>

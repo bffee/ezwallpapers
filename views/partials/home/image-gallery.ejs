@@ -1,0 +1,33 @@
+<%if(wallpapers.length > 0){ %>
+    <div class="wallpaper-container">
+        <%for (let index = 0; index < wallpapers.length; index++) {%>            
+            <div class="masonry-item" style="aspect-ratio: '<%-wallpapers[index].aspect_ratio%>';">
+                <a href="<%=`/preview?id=${wallpapers[index]._id}` %> ">
+                    <img id="<%=wallpapers[index]._id %>" class="wallpaper" src="/<%=wallpapers[index].source %> " loading="lazy" alt="wallpaper">       
+                </a>
+                <div class="masonry-item-option-buttons">
+                    <button><i class="fa-solid fa-flag"></i></button>
+                    <button><i class="fa-solid fa-share"></i></button>
+                </div>
+                <div class="masonry-item-user-profile">
+                    <%if(creators.length <= 1){%> 
+                        <a href="<%=`/profile/@${creators[index].username}`%>" >
+                            <img src="<%=creators[index].profilePicture%>" alt="Profile Pic">
+                            <span><%=`${creators[index].fname} ${creators[index].lname}`%></span>
+                        </a>
+                    <%}else{%> 
+                        <a href="<%=`/profile/@${creators.username}`%>" >
+                            <img src="<%=creators.profilePicture%>" alt="Profile Pic">
+                            <span><%=`${creators.fname} ${creators.lname}`%></span>
+                        </a>
+                    <%} %> 
+                    <button class="download-button" wallpaper="<%=wallpapers[index]._id %>"><i class="fa-solid fa-arrow-down"></i></button>
+                </div>
+            </div>
+        <%} %> 
+    </div>
+<%}else{%>  
+    <div class="no-wallpapers-container">
+        <i class="fa-solid fa-image"></i>
+    </div>
+<%} %> 

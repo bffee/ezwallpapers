@@ -1,0 +1,35 @@
+<div class="profile-container">
+    <img src="<%=profile.profilePicture  %> " alt="profile-pic">
+
+    <div class="profile-info">
+        <div class="name-section">
+            <div class="user-name">
+                 <h1><%=`${profile.fname} ${profile.lname}`%></h1>
+            </div>
+            <span>Member since <%=new Date(profile.createdAt).toDateString()%> </span>
+
+        </div>
+        <div class="description-section">
+            <p><%=profile.bio%></p>
+            <div class="categories">
+                <%profile.categories.forEach(category => {%>
+                    <a href="/?search=<%=category%>"><%=category %> </a> 
+                <%}); %> 
+            </div>
+        </div>
+        <div class="button-section">
+            <% if(owner){ %>
+                <button id="edit-profile-button"><i class="fa-solid fa-user-pen"></i>Edit Profile</button>
+                <button id="upload-wallpaper-button" class="upload-wallpaper"><i class="fa-solid fa-upload"></i>Upload Wallpaper</button>
+            <% }else{ %> 
+                <button id="report-user-button"><i class="fa-solid fa-flag"></i>Report User</button>
+                <button id="send-message-button"><i class="fa-solid fa-message"></i>Send Message</button>
+            <% } %>  
+            
+        </div>
+    </div>
+</div>
+<div class="section-filter">
+    <button class="active"><i class="fa-solid fa-image"></i>Gallery</button>
+    <button><i class="fa-solid fa-bookmark"></i>Collections</button>
+</div>

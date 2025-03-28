@@ -1,0 +1,189 @@
+<div class="trafficChartCard">
+    <!-- <div class="trafficChartHeadings">
+        <div class="traffic-box">
+            <span>Last Year</span>
+            <span>125k</span>
+        </div>
+        <div class="traffic-box">
+            <span>Last Month</span>
+            <span>11k</span>
+        </div>
+        <div class="traffic-box">
+            <span>Last Week</span>
+            <span>4.5k</span>
+        </div>
+        <div class="traffic-box">
+            <span>Today</span>
+            <span>750</span>
+        </div>
+    </div> -->
+    <div class="trafficChartSelectorSection">
+        <div class="traffic-chart-legend">
+            <span class="traffic-chart-legend-box"></span>
+            <span class="traffic-chart-legend-title">Traffic</span>
+        </div>
+        <div class="traffic-chart-dropdown-menu-container">
+            <div class="traffic-chart-dropdown-menu-button ">
+                <span>Month</span>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="traffic-chart-dropdown-menu traffic-chart-dropdown-menu-close">
+                <span class="week">Week</span>
+                <span class="month">Month</span>
+                <span class="year">Year</span>
+            </div>
+        </div>
+    </div>
+    <div class="trafficChartBox">
+        <canvas id="trafficChart"></canvas>
+    </div>
+</div>
+
+
+
+<div class="chartInfo">
+    <div class="chartInfoHeader">
+        <span>Date</span>
+        <span>Traffic</span>
+        <span>Growth</span>
+        <span>MVR</span>
+    </div>
+    <div class="chartInfoBody">
+        <div class="chartInfoTableRow">
+            <span>Feb 10</span>
+            <span>234</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 23</span>
+            <span>/auth</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 11</span>
+            <span>345</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 14</span>
+            <span>/view</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 12</span>
+            <span>734</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 40</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 13</span>
+            <span>234</span>
+            <span class="down"><i class="fa-solid fa-caret-down"></i> 38</span>
+            <span>/profile</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 14</span>
+            <span>145</span>
+            <span class="down"><i class="fa-solid fa-caret-down"></i> 15</span>
+            <span>/admin</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 15</span>
+            <span>456</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 23</span>
+            <span>/view</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 16</span>
+            <span>645</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 18</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 17</span>
+            <span>834</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 25</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 18</span>
+            <span>745</span>
+            <span class="down"><i class="fa-solid fa-caret-down"></i> 5</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+        <div class="chartInfoTableRow">
+            <span>Feb 19</span>
+            <span>934</span>
+            <span class="up"><i class="fa-solid fa-caret-up"></i> 34</span>
+            <span>/</span>
+        </div>
+    </div>
+    <div class="bottomPadding"></div>
+</div>
+
+<div class="subCharts">
+    <div class="deviceChartCard">
+        <div class="deviceChartHeadings"></div>
+        <div class="deviceChartBox">
+            <canvas id="deviceChart"></canvas>
+        </div>
+    </div>
+    <div class="routeChartCard">
+        <div class="routeChartHeadings"></div>
+        <div class="routeChartBox">
+            <canvas id="routeChart"></canvas>
+        </div>
+    </div>
+</div>

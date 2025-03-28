@@ -1,0 +1,48 @@
+/* Layout Utilities */
+.inline-flex { display: inline-flex; }
+.flex { display: flex; }
+
+/* Justify Content */
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-center { justify-content: center; }
+
+/* Align Items */
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+.items-center { align-items: center; }
+
+/* Visual Effects */
+.shining-glass-effect { background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); }
+.normal-glass-effect { background-color: rgba(255, 255, 255, 0.1); }
+
+/* Blur Levels */
+.blur-5 { backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
+.blur-10 { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.blur-15 { backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
+.blur-20 { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+
+/* Glass Border */
+.border-light { border: 1px solid rgba(255, 255, 255, 0.18); }
+.border-dark { border: 1px solid rgba(0, 0, 0, 0.25); }
+
+
+/* Glassmorphism Effect Kit */
+.glassmorphism{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Center Text Kit */
+.inline-flex-center{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

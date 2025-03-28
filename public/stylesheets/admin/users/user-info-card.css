@@ -1,0 +1,156 @@
+.userInfoPopupCard {
+    width: 350px;
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1211;
+    border: 1px solid var(--hover-colour);
+
+}
+.user-info-popup-card-profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--hover-colour);
+}
+
+.user-info-popup-card-profile-pic > img{
+    width: 100%;
+}
+
+.user-info-popup-card-user-name,
+.user-info-popup-card-username,
+.user-info-popup-card-email,
+.user-info-popup-card-role {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.user-info-popup-card-user-name > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--secondry-color);
+}
+.user-info-popup-card-username > span {
+    color: #444;
+}
+.user-info-popup-card-email > span {
+    color: var(--secondry-hover-color);
+}
+.user-info-popup-card-role > span {
+    font-weight: bold;
+    color: var(--secondry-color);
+}
+.user-info-popup-card-status {
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: var(--element-border-radius);
+}
+
+.user-info-popup-card-status > span{
+    font-weight: bold !important;
+}
+
+
+.user-info-popup-card-active {
+    background-color: var(--hover-colour); 
+    color: green;
+}
+
+.user-info-popup-card-suspended {
+    background-color: var(--hover-colour); 
+    color: #856404; 
+}
+
+.user-info-popup-card-deleted {
+    background-color: var(--hover-colour); 
+    color: #721c24; 
+}
+
+.user-info-popup-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.user-info-popup-card-actions button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    flex: 1;
+    text-align: center;
+}
+.user-info-popup-card-view-reports {
+     background: #007bff; 
+     color: var(--secondry-color); 
+}
+
+.user-info-popup-card-suspend {
+     background: #ffc107; 
+     color: white; 
+}
+
+.user-info-popup-card-delete {
+     background: #dc3545; 
+     color: var(--secondry-color); 
+}
+
+.user-info-popup-card-promote {
+     background: #28a745; 
+     color: var(--secondry-color); 
+}
+
+.user-info-popup-card-actions button:hover { opacity: 0.8; }
+
+.popup-card-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--secondry-hover-color);
+}
+
+.userInfoPopupCard.show {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards ease-out;
+}
+
+.userInfoPopupCard.hide {
+    animation: fadeOut 0.3s forwards ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(50%, -48%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(50%, -50%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(50%, -48%);
+    }
+}

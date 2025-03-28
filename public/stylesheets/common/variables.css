@@ -1,0 +1,29 @@
+:root{
+    /* Element Specific Variables */
+    --elemets-font-size: clamp(0.5rem, 1vw + 0.25rem, 2rem);
+    --element-border-radius: 0.5rem;
+    --round-border-radius: 99rem;
+    /* --body-colour: #121212;
+    --primary-colour: #1C1C1C; */
+
+    --profile-page-primary-font-size: clamp(0.5rem, 1.8vw, 2rem);
+    
+    --body-colour: #141414;
+    --primary-colour: #232323;
+
+    /* --secondry-color: rgb(45, 62, 216); */
+    --secondry-color: #a7a7a7;
+    --secondry-color: #c2c2c2;
+    --secondry-hover-color: #8d8d8d;
+    /* --hover-colour: #818080; */
+
+    --hover-colour: #2c2c2c;
+    --tarnsparent-background-color: transparent;
+    --element-border: 0.15rem; 
+
+    /* Button Specific Varialbes */
+    --button-border: var(--element-border) solid var(--primary-colour);
+    --button-padding: 0.5rem 1.2rem;
+    --button-cursor: pointer;
+    --button-border-radius: 0.5rem;
+}

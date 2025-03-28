@@ -1,0 +1,29 @@
+<form class="report-wallpaper-card" action="/report/wallpaper" method="POST">
+    <div class="report-wallpaper-card-header">Report Wallpaper</div>
+    <div class="report-wallpaper-card-warning">Abusing the report system may result in penalties.</div>
+    <div class="report-wallpaper-card-options">
+        <div class="report-wallpaper-card-option">
+            <input type="radio" name="report-type" value="spam" required> Spam
+        </div>
+        <div class="report-wallpaper-card-option">
+            <input type="radio" name="report-type" value="inappropriate-content"> Inappropriate Content
+        </div>
+        <div class="report-wallpaper-card-option">
+            <input type="radio" name="report-type" value="copyright-violation"> Copyright Violation
+        </div>
+        <div class="report-wallpaper-card-option">
+            <input type="radio" name="report-type" value="low-quality"> Low Quality
+        </div>
+        <div class="report-wallpaper-card-option">
+            <input type="radio" name="report-type" value="duplicate"> Duplicate
+        </div>
+        <div class="report-wallpaper-card-option">
+            <input type="radio" name="report-type" value="other"> Other
+        </div>
+    </div>
+    <textarea class="report-wallpaper-card-message" name="message" placeholder="Describe the issue (optional)"></textarea>
+    <div class="report-wallpaper-card-actions">
+        <button type="button" class="cancel">Cancel</button>
+        <button type="submit" class="submit">Submit Report</button>
+    </div>
+</form>

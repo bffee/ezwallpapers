@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/common/variables.css">
+    <link rel="stylesheet" href="/stylesheets/global.css">
+    <link rel="stylesheet" href="/stylesheets/common/header-components.css">
+    <link rel="stylesheet" href="/stylesheets/common/dropdown-menu.css">
+    <link rel="stylesheet" href="/stylesheets/admin/web-traffic.css">
+    <title>ezwallpapers - Admin Dashboard</title>
+
+</head>
+
+<body>
+    <header>
+        <%- include('partials/common/header-components', {user}); %>
+        <%- include('partials/common/dropdown-menu', {user}); %>
+    </header>
+    <main>
+        <%- include('partials/admin/web-traffic') %> 
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/00e0920e71.js" crossorigin="anonymous" defer></script>
+    <script src="/javascripts/common/dropdown-menu.js" defer></script>
+    <script src="/javascripts/admin/chart.umd.js" defer></script>
+    <script src="/javascripts/admin/traffic.js" defer></script>
+</body>
+
+</html>

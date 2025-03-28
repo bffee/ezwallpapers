@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/common/variables.css">
+    <link rel="stylesheet" href="stylesheets/common/header-components.css">
+    <link rel="stylesheet" href="stylesheets/common/side-menu.css">
+    <link rel="stylesheet" href="stylesheets/common/dropdown-menu.css">
+    <link rel="stylesheet" href="stylesheets/common/mobile-menu.css">
+    <link rel="stylesheet" href="stylesheets/common/upload-wallpaper-card.css">
+    <link rel="stylesheet" href="stylesheets/preview/wallpaper-preview.css">
+    <link rel="stylesheet" href="stylesheets/preview/wallpaper-report-card.css">
+    <link rel="stylesheet" href="stylesheets/home/image-gallery.css">
+    <script src="https://kit.fontawesome.com/00e0920e71.js" crossorigin="anonymous" defer></script>
+    <script src="javascripts/common/infinite-scroll.js" defer></script>
+    <title>ezwallpapers</title>
+    
+</head>
+
+<body>
+    
+    <header>
+        <%- include('partials/common/header-components', {user}); %>
+        <%- include('partials/common/dropdown-menu', {user}); %>
+        <%- include('partials/common/mobile-menu', {user}); %>
+    </header>
+    
+    <aside class="side-menu side-menu-close">
+        <%- include('partials/common/side-menu', {user}); %>
+    </aside>
+    
+    <main>
+        <div class="backdrop"></div>
+        <%- include('partials/preview/wallpaper-preview', {wallpaper, creator, owner: user?.username === creator.username}); %>
+        <%- include('partials/preview/wallpaper-report-card') %>
+        <%- include('partials/home/image-gallery', {wallpapers, creators}); %>
+        <%- include('partials/common/upload-wallpaper-card')%>
+    </main>
+    
+</body>
+
+<script>
+    const wallpaperData = '<%- JSON.stringify(wallpapers) %>'
+    let cursor = '<%- JSON.stringify(cursor) %>'
+    if(cursor != 'null'){
+        cursor = cursor.slice(1, (cursor.length - 1))
+    }
+    else{
+        cursor = null
+    }
+</script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="javascripts/common/masonry-layout.js" defer></script>
+<script src="javascripts/common/side-menu.js" defer></script>
+<script src="javascripts/common/dropdown-menu.js" defer></script>
+<script src="javascripts/preview/wallpaper-report-card.js" defer></script>
+<script src="javascripts/common/upload-wallpaper-card.js"></script>
+<script src="javascripts/common/wallpaper-option-buttons.js"></script>
+
+
+
+</html>

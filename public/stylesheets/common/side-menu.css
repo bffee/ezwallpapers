@@ -1,0 +1,134 @@
+.side-menu{
+    width: 31%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1002;
+    padding: 0.9rem 1rem 0.2rem 1.25rem;
+    padding: 0.5rem 1rem 0.2rem 2.5%;
+    background-color: var(--body-colour);
+}
+
+.header-section{
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0;
+    padding-bottom: 1rem;
+}
+
+.header-section > h3{
+    color: var(--secondry-color);
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: clamp(0.75rem, 1.75vw, 1.75rem);
+}
+
+.header-section > h3 > span{
+    background-color: var(--primary-colour);
+    border-radius: var(--round-border-radius);
+    padding: 0 0.3rem;
+}
+
+.side-menu-close-button {
+    background-color: var(--tarnsparent-background-color);
+    color: var(--secondry-color);
+    font-size: var(--elemets-font-size);
+    padding: 0.3rem 0.5rem;
+    border: none;
+    border-radius: var(--round-border-radius);
+    cursor: pointer;
+}
+
+.main-menu,
+.more-options{
+    font-size: clamp(0.70rem, 1.40vw, 1.40rem);
+    padding: 0.3rem 0;
+    color: var(--secondry-color);
+}
+
+.main-section > a, 
+.secondry-section > a{
+    display: block;
+    text-decoration: none;
+    color: var(--secondry-color);
+    font-size: var(--elemets-font-size);
+    padding: 1rem;
+    margin-left: 1rem;
+    border-radius: var(--element-border-radius);
+}
+
+
+.side-menu-close-button:hover,
+.main-section > a:hover, 
+.secondry-section > a:hover,
+.footer-section > a:hover{
+    background-color: var(--primary-colour);
+}
+
+.main-section > a > span, 
+.secondry-section > a > span{
+    margin-left: 1rem;
+}
+
+.main-section > a > i,
+.main-section > a > span,
+.secondry-section > a > i,
+.secondry-section  > a > span,
+.footer-section > a > i{
+    font-size: clamp(0.70rem, 1.35vw, 1.35rem);
+}
+
+.main-section,
+.secondry-section{
+    /* border-bottom: 1px solid var(--secondry-color); */
+    padding: 0.5rem 0;
+}
+
+
+.footer-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    border-top: 1px solid var(--secondry-color);;
+}
+
+.footer-section > a{
+    color: var(--secondry-color);
+    padding: 0.3rem 0.5rem;
+    text-decoration: none;
+    border-radius: var(--round-border-radius);
+}
+
+.side-menu-open{
+    visibility: visible;
+    opacity: 1;
+    left: 1.5%;
+    left: 0;
+    transition: all 0.4s;
+}
+
+.side-menu-close{
+    visibility: hidden;
+    opacity: 0;
+    left: -100%;
+    transition: all 0.4s;
+}
+
+@media screen and (min-width: 2000px) {
+    .side-menu{
+        width: 20%;
+    }
+}
+
+@media screen and (min-width:1440px) and (max-width: 2000px){
+    .side-menu{
+        width: 30%;
+    }
+}
+
+@media  screen and (max-width: 820px) {
+    .side-menu{
+        width: 100%;
+    }
+}

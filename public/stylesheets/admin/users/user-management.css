@@ -1,0 +1,404 @@
+main{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.usersInfoCards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.usersInfoCards > div{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--primary-colour);
+    color: var(--secondry-color);
+    border-radius: var(--element-border-radius);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--hover-colour);
+}
+
+.usersInfoCards > div > h2{
+    font-weight: bolder !important;
+}
+
+.usersInfoCards > div > span{
+    font-size: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.usersInfoCards > div > span > i{
+    margin-right: 0.35rem;
+}
+
+.totalUsersCard > span > i{
+    color: rgb(62, 62, 255);
+}
+
+.newUsersCard > span > i{
+    color: rgb(0, 128, 0);
+}
+
+.activeUsersCard > span > i{
+    color: rgb(255, 69, 0);
+}
+
+.suspendedUsersCard > span > i{
+    color: rgb(207, 8, 8);
+}
+
+
+.usersTable{
+    width: 100%;
+    aspect-ratio: 1.95/1;
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+    overflow-y: scroll;
+    color: var(--secondry-color);
+    position: relative;
+    font-size: 0.85rem;
+    border: 1px solid var(--hover-colour);
+    margin-bottom: 1rem;
+}
+
+.usersTable::-webkit-scrollbar{
+    width: 0;
+}
+
+.usersTableHeader{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--primary-colour);
+}
+
+.usersTableOptions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.8s;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+
+.usersTableSearchBox{
+    width: 12.5rem;
+    display: flex;
+    background-color: var(--hover-colour);
+    border-radius: var(--element-border-radius);
+}
+
+.user-search-input{
+    width: 90%;
+    border: 0;
+    outline: none;
+    font-size: var(--elemets-font-size);
+    color: var(--secondry-color);
+    transition: all 0.8s;
+    background-color: transparent;
+    padding: 0.3rem;
+    font-size: clamp(0.75rem, 1.25vw, 1rem);
+    font-size: 0.75rem;
+}
+
+.user-search-button{
+    color: var(--secondry-color);
+    border: 0;
+    cursor: var(--button-cursor);
+    font-size: var(--elemets-font-size);
+    font-size: clamp(0.75rem, 1.25vw, 1rem);
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    background-color: transparent;
+}
+
+.usersTableHeadings{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--hover-colour);
+}
+
+.usersTableHeadings > span{
+    color: var(--secondry-hover-color);
+    font-weight: bolder !important;
+}
+
+.usersTableBody{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.usersTableRow{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--hover-colour);
+    scroll-behavior: smooth;
+}
+
+.usersTableRow > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userProfile{
+    justify-self: start;
+    padding-left: 1.5rem;
+}
+
+.userProfile > img{
+    /* width: 1.85rem; */
+    height: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: var(--round-border-radius);
+    cursor: default;
+}
+
+.userProfile > span{
+    padding: 0 0.5rem;
+    cursor: default;
+}
+
+.safe{
+    color: rgb(0, 128, 0);
+}
+
+.abnormal{
+    color: yellow;
+}
+
+.unsafe{
+    color: rgb(255, 69, 0);
+}
+
+.danger{
+    color: rgb(207, 8, 8);
+}
+
+.admin-color{
+    color: rgb(62, 62, 255);
+}
+
+.user-color{
+    color: green;
+}
+
+.active{
+    border-radius: var(--round-border-radius);
+    padding: 0rem 1rem;
+    background-color: green;
+}
+
+.suspended{
+    border-radius: var(--round-border-radius);
+    padding: 0rem 1rem;
+    background-color: rgb(255, 69, 0);
+}
+
+.deleted{
+    border-radius: var(--round-border-radius);
+    padding: 0rem 1rem;
+    background-color: rgb(207, 8, 8);
+}
+
+
+.userReports > span{
+    cursor: default;
+}
+
+.promote-user{
+    color: rgb(0, 128, 0);
+}
+
+.view-reports{
+    color: yellow;
+}
+
+.suspend-user{
+    color: rgb(255, 69, 0);
+}
+
+.unban-user{
+    color: rgb(62, 62, 255);
+}
+
+.delete-user{
+    color: rgb(207, 8, 8);
+}
+
+.locked{
+    opacity: 0.3;
+    cursor: not-allowed !important;
+}
+
+.bottomPadding{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--primary-colour);
+    z-index: 1;
+}
+
+.usersCharts{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.rolesChartCard {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+    border: 1px solid var(--hover-colour);
+    box-shadow: rgba(36, 36, 36, 0.19) 0px 10px 20px, rgba(36, 36, 36, 0.23) 0px 6px 6px;
+}
+
+.rolesChartBox {
+    width: 100%;
+    padding: 1rem;
+}
+
+.usersChartCard {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+    border: 1px solid var(--hover-colour);
+    box-shadow: rgba(36, 36, 36, 0.19) 0px 10px 20px, rgba(36, 36, 36, 0.23) 0px 6px 6px;
+}
+
+.usersChartBox {
+    width: 100%;
+    aspect-ratio: 2.35/1;
+    padding: 20px;
+    padding: 0.5rem;
+}
+
+
+@media screen and (min-width: 1441px) {
+    .usersInfoCards > div{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    main{
+        width: 95%;
+    }
+
+    .usersTable{
+        aspect-ratio: 1.35/1;
+        font-size: 0.65rem;
+    }
+
+    .usersTableOptions{
+        padding: 0.5rem;
+    }
+
+    .userAction{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .user-search-button, .user-search-input{
+        font-size: 0.60rem;
+    }
+
+    .userProfile > img{
+        height: 1.5rem;
+        margin-left: 0.2rem;
+    }
+
+    .usersInfoCards{
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .usersInfoCards > div{
+        width: 49%;
+        padding: 0.5rem;
+        margin-bottom: 0.4rem;
+    }
+}
+
+
+@media screen and (max-width: 535px) {
+    .usersCharts{
+        flex-direction: column;
+        margin-bottom: 0;
+        gap: 0;
+    }
+
+    .usersTableHeadings, .usersTableRow{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .userRole{
+        display: none !important;
+    }
+    
+    .usersChartCard, .rolesChartCard{
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin-bottom: 1rem;
+    }
+    
+    .rolesChartBox{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main{
+        width: 98%;
+    }
+
+    .usersTableSearchBox{
+        width: 10rem;
+    }
+
+    .usersInfoCards{
+        margin-bottom: 0.5rem;
+    }
+
+    .usersInfoCards > div{
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .usersTable{
+        aspect-ratio: 1.1/1;
+    }
+
+}

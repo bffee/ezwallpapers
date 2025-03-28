@@ -1,0 +1,167 @@
+.box-container{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.box-container > img{
+    width: 100%;
+    /* height: 450px; */
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    background-color: #23232360;
+    margin: auto;
+}
+
+.wallpaper-info-container{
+    margin-top: 1rem;
+}
+
+.upload-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.user-img{
+    flex-shrink: 0;
+    width: 4%;
+    width: 2rem;
+    margin-right: 0.75rem; 
+    aspect-ratio: 1 / 1;
+}
+
+.user-img > img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--round-border-radius);
+}
+
+.user-name{
+    font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+    text-decoration: none;
+    color: var(--secondry-color);
+}
+
+.user-name:hover{
+    color: var(--secondry-hover-color);
+}
+
+.options > button{
+    border: 0;
+    background-color: transparent;
+    color: var(--secondry-color);
+    margin: 0 0.15rem;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    font-size: clamp(0.5rem, 1.4vw, 1.25rem);
+    background-color: var(--primary-colour);
+    border-radius: var(--round-border-radius);
+}
+
+.options > button:hover{
+    background-color: var(--hover-colour);
+}
+
+.options > button > i{
+    font-size: clamp(0.5rem, 1.4vw, 1.25rem);
+    margin-right: 0.35rem;
+}
+
+.wallpaper-details{
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 0 1rem 0;
+}
+
+.wallpaper-details > span{
+    color: var(--secondry-hover-color);
+    font-size: clamp(0.6rem, 1.4vw, 1.25rem);
+    padding: 0.25rem 0;
+}
+
+.wallpaper-details > span > i{
+    font-size: clamp(0.6rem, 1.4vw, 1.25rem);
+    margin-right: 0.75rem;
+}
+
+.download-button-style{
+    width: 100%;
+    font-size: 1rem;
+    color: var(--secondry-color);
+    text-align: center;
+    padding: 0.25rem;
+    outline: none;
+    border: none;
+    border-radius: var(--element-border-radius);
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.tags-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.tags-container > a{
+    text-decoration: none;
+    font-size: clamp(0.5rem, 1.4vw, 1rem);
+    color: var(--secondry-color);
+    padding: 0.25rem 0.5rem;
+    background-color: var(--primary-colour);
+    /* border-radius: var(--element-border-radius); */
+    margin: 0.25rem 0.25rem 0.25rem 0;
+}
+
+.tags-container > a:hover{
+    background-color: var(--hover-colour);
+}
+
+@media screen and (min-width: 1440px){
+    .user-img{
+        width: 38px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .user-img{
+        /* width: clamp(1.25rem, 7vw, 1.5rem); */
+        /* margin-right: clamp(0.4rem, 1.5vw, 0.5rem); */
+        width: 30px;
+        margin-right: 0.5rem;
+    }
+
+    .upload-info{
+        padding-top: 0.75rem;
+    }
+
+    .tags-container{
+        padding: 0.75rem 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .user-img{
+        width: 27px;
+    }
+    
+    .upload-info{
+        padding-top: 0.5rem;
+    }
+    
+    .wallpaper-details{
+        padding-bottom: 0.75rem;
+    }
+
+    .tags-container{
+        padding: 0.5rem 0;
+    }
+}

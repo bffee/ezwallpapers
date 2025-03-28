@@ -1,0 +1,58 @@
+
+    <form class="signup-container">
+        <!-- <h2>Sign Up</h2> -->
+        <div class="form-profile-picture">
+            <img src="/images/profile_pictures/placeholder.jpg" alt="Profile Picture" id="form-place-holder-img">
+            <label for="form-profile-picture" class="upload-label">Upload Picture</label>
+            <input type="file" id="form-profile-picture" name="profile-picture" onchange="previewImage(event)">
+        </div>
+        <div class="signup-form">
+            <div class="form-group">
+                <div class="half">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name" required class="form-inputs">
+                    <span class="required-field" id="required-fname">this field is required</span>
+                </div>
+                <div class="half">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name" required class="form-inputs">
+                    <span class="required-field" id="required-lname">this field is required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username">Username *</label>
+                <input type="text" id="username" name="username" required class="form-inputs">
+                <span class="required-field" id="required-username">this field is required</span>
+                <span class="required-field" id="existing-username">username already exist</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required class="form-inputs">
+                <span class="required-field" id="required-email">this field is required</span>
+                <span class="required-field" id="invalid-email">enter a valid email</span>
+                <span class="required-field" id="existing-email">email is already in use</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" required class="form-inputs">
+                <span class="required-field" id="required-password">this field is required</span>
+                <span class="required-field" id="short-password">passwrod is too short</span>
+            </div>
+            <div class="form-group">
+                <label for="interest">Interests</label>
+                <div class="tag-input-container form-inputs">
+                    <div class="tag-input" contenteditable="true" onkeydown="addTag(event)"></div>
+                </div>
+                <span class="required-field" id="required-tags">this field is required</span>
+                <span class="required-field" id="minimum-tags">Minimum 5 keywords is required</span>
+            </div>    
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="3" placeholder="Tell us about yourself" class="form-inputs"></textarea>
+                <span class="required-field" id="required-bio">this field is required</span>
+            </div>
+            <div class="signup-actions">
+                <button type="submit" id="form-submit-btn">Sign Up</button>
+            </div>
+        </div>
+    </form>

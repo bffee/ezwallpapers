@@ -1,0 +1,126 @@
+.report-user-card {
+    width: 400px;
+    color: var(--secondry-color);
+    background-color: var(--primary-colour);
+    border-radius: 10px;
+    border-radius: var(--element-border-radius);
+    border: 1px solid var(--hover-colour);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1231;
+}
+.report-user-card-header {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #dc3545;
+    color: var(--secondry-hover-color);
+}
+.report-user-card-warning {
+    font-size: 14px;
+    font-size: 0.8rem;
+    color: #555;
+    color: var(--secondry-hover-color);
+    margin-bottom: 15px;
+    background: #fff3cd;
+    background-color: var(--hover-colour);
+    padding: 10px;
+    border-radius: 5px;
+    border-radius: var(--element-border-radius);
+}
+.report-user-card-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.report-user-card-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+}
+.report-user-card-option input[type='radio'] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: var(--hover-colour);
+    border: 2px solid var(--hover-colour);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.report-user-card-option input[type='radio']:checked{
+    background-color: var(--secondry-hover-color);
+}
+
+.report-user-card-message {
+    font-size: 0.85rem;
+    width: 100%;
+    height: 80px;
+    border: 1px solid var(--hover-colour);
+    border-radius: 5px;
+    border-radius: var(--element-border-radius);
+    padding: 8px;
+    resize: none;
+    background-color: var(--hover-colour);
+    outline: none;
+    color: var(--secondry-hover-color);
+}
+
+.report-user-card-message::selection{
+    border: 1px solid var(--secondry-hover-color);
+}
+
+.report-user-card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.report-user-card-actions button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.cancel { background-color: var(--hover-colour); color: var(--secondry-color); }
+.submit { background: #dc3545; color: var(--secondry-color); }
+.report-user-card-actions button:hover { opacity: 0.8; }
+
+.report-user-card.show {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards ease-out;
+}
+
+.report-user-card.hide {
+    animation: fadeOut 0.3s forwards ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+}

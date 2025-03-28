@@ -1,0 +1,19 @@
+<div class="dropdown-menu hidden">
+    <a class="dropdown-menu-profile-section" href="http://localhost:3000/profile/@<%=user?.username %>  %>">
+        <img class="dropdown-menu-profile-pic" src="<%=user?.profilePicture %> " alt="">
+        <!-- <span class="dropdown-menu-username">Sato Hana</span> -->
+        <span class="dropdown-menu-username"><%=`${user?.fname} ${user?.lname}`%></span>
+    </a>
+    <a class="dropdown-menu-elements profile" href="http://localhost:3000/profile/@<%=user?.username %>">
+        <i class="fa-solid fa-user"></i><span>View Profile</span>
+    </a>
+    <a href="" class="dropdown-menu-elements">
+        <i class="fa-solid fa-message"></i><span>View Messages</span>
+    </a>
+    <a href="" class="dropdown-menu-elements">
+        <i class="fa-solid fa-bookmark"></i><span>View Bookmarks</span>
+    </a>
+    <a class="dropdown-menu-elements logout">
+        <i class="fa-solid fa-right-from-bracket"></i><span>Logout</span>
+    </a>
+</div>

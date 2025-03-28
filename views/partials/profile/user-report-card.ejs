@@ -1,0 +1,23 @@
+<form class="report-user-card" action="/report/user?username=<%=profile.username%>" method="POST">
+    <div class="report-user-card-header">Report User</div>
+    <div class="report-user-card-warning">Abusing the report system may result in penalties.</div>
+    <div class="report-user-card-options">
+        <div class="report-user-card-option">
+            <input type="radio" name="reportType" value="spam" required> Spam
+        </div>
+        <div class="report-user-card-option">
+            <input type="radio" name="reportType" value="inappropriate-profile"> Inappropriate Profile
+        </div>
+        <div class="report-user-card-option">
+            <input type="radio" name="reportType" value="copyright-impersonation"> Impersonation
+        </div>
+        <div class="report-user-card-option">
+            <input type="radio" name="reportType" value="other"> Other
+        </div>
+    </div>
+    <textarea class="report-user-card-message" name="message" placeholder="Describe the issue (optional)"></textarea>
+    <div class="report-user-card-actions">
+        <button type="button" class="cancel">Cancel</button>
+        <button type="submit" class="submit">Submit Report</button>
+    </div>
+</form>

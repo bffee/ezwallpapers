@@ -1,0 +1,78 @@
+.report-detail-card {
+    width: 400px;
+    aspect-ratio: 1/1;
+    background-color: var(--primary-colour);
+    border-radius: var(--element-border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--secondry-color);
+    z-index: 1233;
+    border: 1px solid var(--hover-colour);
+    display: none;
+}
+
+.report-detail-card-header {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--hover-colour);
+    color: var(--secondry-hover-color);
+}
+
+.report-detail-card-body {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.report-detail-card-info {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.report-detail-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.5rem;
+}
+
+.report-detail-card-actions button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: var(--element-border-radius);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+
+.dismiss {
+    background: var(--hover-colour);
+    color: var(--secondry-color);
+}
+
+.take-action {
+    background: #dc3545;
+    color: var(--secondry-color);
+}
+
+.report-detail-card-actions button:hover {
+    opacity: 0.8;
+}
+
+.report-detail-card-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--secondry-hover-color);
+}

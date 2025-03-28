@@ -1,0 +1,212 @@
+/* Profile Card */
+.edit-profile-card {
+    width: 25rem;
+    background-color: var(--primary-colour);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1111;
+    border: 1px solid var(--hover-colour);
+    display: none;
+}
+
+/* Animation for Opening */
+.edit-profile-card.show {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards ease-out;
+}
+
+/* Animation for Closing */
+.edit-profile-card.hide {
+    animation: fadeOut 0.3s forwards ease-out;
+}
+
+/* Profile Picture Upload */
+.edit-profile-pic {
+    position: relative;
+    width: 6.25rem;
+    height: 6.25rem;
+    margin: auto;
+}
+
+.edit-profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid var(--hover-colour);
+}
+
+.edit-profile-pic input {
+    display: none;
+}
+
+.edit-profile-upload-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: var(--hover-colour);
+    color: var(--secondry-color);
+    border: none;
+    padding: 0.35rem 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.edit-profile-upload-btn:hover{
+    background-color: var(--primary-colour);
+}
+
+/* Form Fields */
+.edit-profile-form-group {
+    margin-top: 0.8rem;
+    text-align: left;
+}
+
+.edit-profile-card label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondry-hover-color);
+}
+
+.edit-profile-card input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    color: var(--secondry-color);
+    background-color: var(--hover-colour);
+    border: 1px solid var(--hover-colour);
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.edit-profile-card textarea {
+    resize: none;
+    height: 60px;
+}
+
+.edit-profile-card textarea::-webkit-scrollbar{
+    width: 0;
+}
+
+/* Category Box */
+.edit-profile-category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: 1px solid var(--hover-colour);
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: var(--element-border-radius);
+    min-height: 40px;
+    height: 3rem;
+    /* max-height: 5.1rem; */
+    overflow-y: auto;
+    cursor: text;
+    align-items: center;
+}
+
+.edit-profile-category-container::-webkit-scrollbar{
+    width: 0;
+}
+
+/* Tags Container */
+.edit-profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+
+/* Individual Category Tag */
+.edit-profile-tag {
+    background: #007bff;
+    background-color: var(--hover-colour);
+    color: var(--secondry-color);
+    padding: 5px 8px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit-profile-tag:hover{
+    opacity: 0.7;
+}
+
+.edit-profile-tag span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Editable Input for New Tags */
+.edit-profile-category-input {
+    min-width: 6.25rem;
+    flex-grow: 1;
+    outline: none;
+    color: var(--secondry-color);
+}
+
+
+
+/* Save Button */
+.edit-profile-save-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #007bff;
+    background-color: var(--hover-colour);
+    color: var(--secondry-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-profile-close-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--secondry-hover-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+}
+
+@media (max-width: 426px) {
+    .edit-profile-card{
+        width: 100%;
+    }
+}

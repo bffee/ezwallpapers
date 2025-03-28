@@ -1,0 +1,315 @@
+.profile-container{
+    width: 100%;
+    display: flex;
+    color: var(--secondry-color);
+}
+
+.profile-container > img{
+    flex-shrink: 0;
+    display: inline-block;
+    aspect-ratio: 1/1;
+    border-radius: var(--element-border-radius);
+    width: 33.3%;
+    object-fit: cover;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.profile-info{
+    /* margin: 0 0 1.25rem 0; */
+    /* margin: 1.25rem 0; */
+    margin-bottom: 1.25rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name{
+    display: inline-flex;
+    align-items: center;
+}
+
+.user-name > h1{
+    font-size: 3rem;
+    font-size: clamp(1.55rem, 4.75vw, 4rem);
+    padding: 0 0 1.35rem 0;
+    padding: 0 0.9rem;
+}
+
+.user-name > button{
+    font-size: 2rem;
+    background-color: transparent;
+    border: 0;
+    color: var(--secondry-color);
+    padding: 0 0.5rem 0 0.5rem;
+    margin-left: 3rem;
+    cursor: pointer;
+}
+
+.name-section > span{
+    display: block;
+    font-size: 0.70rem;
+    font-size: clamp(0.45rem, 1.3vw, 1.35rem);
+    font-size: clamp(0.45rem, 1.25vw, 1.25rem);
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.description-section{
+    font-size: 1rem;
+    font-size: clamp(0.5rem, 1.85vw, 1.85rem);
+    font-size: clamp(0.5rem, 1.75vw, 1.75rem);
+    font-size: clamp(0.65rem, 1.65vw, 1.65rem);
+    font-size: clamp(0.65rem, 1.4vw, 1.45rem);
+    font-size: var(--profile-page-primary-font-size);
+    padding: 1.5rem 0 1rem 0;
+}
+
+.description-section > p{
+    min-height: 70px;
+    padding: 0 1rem;
+}
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding: 1.5rem 0 1rem 0;
+}
+
+.categories > a{
+    color: var(--secondry-color);
+    padding: 0 1rem;
+    margin: 0.35rem 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: clamp(0.55rem, 1.4vw, 1.4rem);
+}
+/* 
+.categories > a:first-child{
+    padding-left: 0;
+} */
+
+.categories > a:hover{
+    color: var(--secondry-hover-color);
+}
+
+.button-section{
+    padding: 0 1rem;
+}
+
+.button-section > button{
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-colour);
+    color: var(--secondry-color);
+    border: 0;
+    border-radius: var(--element-border-radius);
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: var(--profile-page-primary-font-size);
+    font-size: clamp(0.5rem, 1.7vw, 1.75rem);
+    font-size: clamp(0.5rem, 1.6vw, 1.65rem);
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+
+}
+
+.button-section > button:first-child{
+    margin-left: 0;
+}
+
+
+.button-section > button:hover{
+    background-color: var(--hover-colour);
+}
+
+.button-section > button > i{
+    margin-right: 0.5rem;
+}
+
+.section-filter{
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-filter > button{
+    font-size: var(--profile-page-primary-font-size);
+    font-size: clamp(0.5rem, 1.7vw, 1.75rem);
+    font-size: clamp(0.5rem, 1.6vw, 1.6rem);
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    color: var(--secondry-color);
+    border: 0;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.section-filter > button > i{
+    margin-right: 0.5rem;
+    font-size: clamp(0.5rem, 1.7vw, 1.75rem);
+    font-size: clamp(0.5rem, 1.6vw, 1.6rem);
+}
+
+button:hover{
+    color: var(--secondry-hover-color);
+}
+
+button.active{
+    border-bottom: var(--element-border) solid var(--secondry-color);
+}
+
+button.active:hover{
+    border-color: var(--secondry-hover-color);
+}
+
+
+/* media queries */
+/* @media screen and (min-width: 1601px) and (max-width: 2000px) {
+    .description-section > p{
+        min-height: 12vw;
+    }
+} */
+
+@media screen and (min-width: 1440px){
+
+    /* Apply a more flexible width for images */
+.profile-container > img {
+    width: clamp(25%, 30vw, 32%); /* Adjusts between 25% and 32% dynamically */
+}
+
+/* Adjust padding dynamically */
+.description-section {
+    padding: clamp(1.5rem, 2vw, 2.5rem) 0 clamp(0.75rem, 1vw, 1.5rem) 0;
+}
+
+/* Min-height for text, ensuring it adapts well */
+.description-section > p {
+    min-height: clamp(100px, 9vw, 300px);
+}
+
+/* Categories section padding with a more fluid approach */
+.categories {
+    padding: clamp(1.5rem, 2vw, 2.5rem) 0 clamp(0.75rem, 1vw, 1.5rem) 0;
+}
+
+    /* .profile-container > img{
+        width: 31.5%;
+    }
+
+    .description-section{
+        padding: 2.25rem 0 1.25rem 0;       
+    }
+
+    .description-section > p{
+        min-height: 135px;
+    }
+
+    .categories{
+        padding: 2rem 0 1rem 0;
+    } */
+    
+}
+
+@media screen and (min-width: 1150px) and (max-width: 1439px){
+    .description-section > p{
+        min-height: 115px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .profile-container{
+        flex-direction: column;
+    }
+
+    .button-section{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button-section > button{
+        width: 48%;
+        margin: 0;
+    }
+
+    
+    .profile-container > img{
+        border-radius: var(--round-border-radius);
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
+
+    .profile-info{
+        margin: 1.25rem 0;
+        width: 100%;
+    }
+
+    .description-section > p{
+        min-height: 50px;
+    }
+
+    .section-filter{
+        padding: 1rem 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .button-section{
+        flex-direction: column;
+    }
+
+    .button-section > button{
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+}
+
+@media screen and (max-width: 290px){
+    .profile-container{
+        flex-direction: column;
+    }
+    
+    .profile-container > img{
+        border-radius: var(--round-border-radius);
+        margin-left: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .user-name > h1{
+        padding: 0 0.5rem;
+    }
+
+    .name-section > span{
+        margin-left: 0.5rem;
+    }
+
+    .profile-info{
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .description-section > p{
+        padding: 0 0.5rem;
+        min-height: 30px;
+    }
+
+    .categories > a{
+        padding: 0 0.5rem;
+    }
+
+    .button-section{
+        padding: 0 0.5rem;
+    }
+
+    .section-filter{
+        padding: 1rem 0;
+    }
+
+    .section-filter > button{
+        margin: 0;
+    }
+}
+
+
+
+
+

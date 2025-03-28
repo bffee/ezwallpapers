@@ -1,0 +1,50 @@
+<!-- <img src="/images/icons/log-in-form.png" alt=""> -->
+<div class="container">
+    <div class="headings">
+        <button class="signup-form-toggle active">signup</button>
+        <button class="login-form-toggle">login</button>
+        <!-- <div class="sign-up-form-toggle active">Signup</div>
+        <div class="log-in-form-toggle">Login</div> -->
+    </div>
+    <div class="form-container">
+        <div class="login-card">
+            <form method="post" action="/auth/login">
+                <div class="input-container">
+                    <input type="text" name="loginUsername" id="loginUsername" required>
+                    <label for="loginUsername">Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="loginPassword" id="loginPassword" required>
+                    <label for="loginPassword">Password</label>
+                </div>
+                <button type="submit">LOGIN</button>
+            </form>
+        </div>
+        <div class="signup-card">
+            <form method="post" action="/auth/signup">
+                <div class="input-container">
+                    <input type="text" id="signinFname" name="signinFname" required>
+                    <label for="signinFname">First Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="signinLname" name="signinLname" required>
+                    <label for="signinLname">Last Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="signinUsername" name="signinUsername" required>
+                    <label for="signinUsername">Username</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="signinEmail" id="signinEmail" required>
+                    <label for="signinEmail">Email</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="signinPassword" id="signinPassword" required>
+                    <label for="signinPassword">Password</label>
+                </div>
+                <button type="submit">SIGNUP</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
