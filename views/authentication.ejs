@@ -6,11 +6,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/global.css">
-    <link rel="stylesheet" href="stylesheets/common/variables.css">
-    <link rel="stylesheet" href="stylesheets/common/header-components.css">
-    <link rel="stylesheet" href="stylesheets/common/side-menu.css">
-    <link rel="stylesheet" href="stylesheets/signup/signup-form.css">
+    <link rel="stylesheet" href="/stylesheets/global.css">
+    <link rel="stylesheet" href="/stylesheets/common/variables.css">
+    <link rel="stylesheet" href="/stylesheets/common/header-components.css">
+    <link rel="stylesheet" href="/stylesheets/common/side-menu.css">
+    <link rel="stylesheet" href="/stylesheets/authentication/signup-form.css">
+    <link rel="stylesheet" href="/stylesheets/authentication/login-form.css">
     <script src="https://kit.fontawesome.com/00e0920e71.js" crossorigin="anonymous" defer></script>
     <title>ezwallpapers | log-in</title>
 
@@ -26,10 +27,15 @@
     </aside>
 
     <main>
-        <%- include('partials/signup/signup-form'); %>
+        <%if(form === 'signup'){ %> 
+            <%- include('partials/authentication/signup-form'); %>
+        <%}else{%> 
+            <%- include('partials/authentication/login-form'); %>
+        <%} %> 
     </main>
 </body>
-<!-- <script src="javascripts/signup/form-toggle.js" defer></script> -->
-<script src="javascripts/signup/signup-form.js" defer></script>
-<!-- <script src="javascripts/common/dropdown-menu.js"></script> -->
+<%if(form === 'signup'){ %> 
+    <script src="/javascripts/authentication/signup-form.js" defer></script>
+<%} %> 
+<script src="/javascripts/common/dropdown-menu.js"></script>
 </html>

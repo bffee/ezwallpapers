@@ -1,32 +1,29 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {Users} = require('../models/users');
-
-// Secret key for JWT
-const JWT_SECRET = 'abuzark';
+const {JWT_SECERET} = require('../config/config')
 
 const loginUser = async (req, res) => {
-  const { loginUsername, loginPassword } = req.body;
-  console.log(req.body)
+  const { email, password } = req.body;
 
   try {
     // Check if the user exists
-    const user = await Users.findOne({ username: loginUsername });
-    console.log(loginUsername)
-    console.log(loginPassword)
+    const user = await Users.findOne({ email: email });
+    console.log(email)
+    console.log(password)
     console.log(user)
     if (!user) {
       return res.status(401).json({ message: 'Invalid email or password.' });
     }
 
     // Compare the provided password with the hashed password in the database
-    const isPasswordValid = await bcrypt.compare(loginPassword, user.password);
+    const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return res.status(401).json({ message: 'Invalid email or password.' });
     }
 
     // Generate JWT token
-    const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '168h' });
+    const token = jwt.sign({ id: user._id }, JWT_SECERET, { expiresIn: '168h' });
 
     // Set the JWT as a cookie
     res.cookie('authToken', token, {

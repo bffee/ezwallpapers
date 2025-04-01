@@ -1,12 +1,12 @@
 <%if(wallpapers.length > 0){ %>
     <div class="wallpaper-container">
         <%for (let index = 0; index < wallpapers.length; index++) {%>            
-            <div class="masonry-item" style="aspect-ratio: '<%-wallpapers[index].aspect_ratio%>';">
+            <div class="masonry-item">
                 <a href="<%=`/preview?id=${wallpapers[index]._id}` %> ">
-                    <img id="<%=wallpapers[index]._id %>" class="wallpaper" src="/<%=wallpapers[index].source %> " loading="lazy" alt="wallpaper">       
+                    <img id="<%=wallpapers[index]._id %>" class="wallpaper" src="<%=wallpapers[index].source %> " loading="lazy" alt="wallpaper">       
                 </a>
                 <div class="masonry-item-option-buttons">
-                    <button><i class="fa-solid fa-flag"></i></button>
+                    <button><i class="fa-solid fa-heart"></i></button>
                     <button><i class="fa-solid fa-share"></i></button>
                 </div>
                 <div class="masonry-item-user-profile">
@@ -31,3 +31,8 @@
         <i class="fa-solid fa-image"></i>
     </div>
 <%} %> 
+<div id="loading" class="loader" style="display: none;">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>

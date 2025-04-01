@@ -5,41 +5,41 @@
     </div>
     <div class="mobile-menu-main-section">
         <h3>Main Menu</h3>
-        <a href="http://localhost:3000/">
+        <a href="/">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
         </a>
-        <a href="http://localhost:3000/explore">
+        <a href="/explore">
             <i class="fa-solid fa-compass"></i>
             <span>Explore</span>
         </a>
         <%if(user){%>
-            <a href="http://localhost:3000/profile/@<%=user.username %> ">
+            <a href="/profile/@<%=user.username %> ">
                 <i class="fa-solid fa-heart"></i>
                 <span>Favourite</span>
             </a>
         <%}else{%>
-            <a href="http://localhost:3000/auth ">
+            <a href="/auth ">
                 <i class="fa-solid fa-heart"></i>
                 <span>Favourite</span>
             </a>
         <%} %>   
         <h3>More Options</h3>
-        <a href="http://localhost:3000/bug-report">
+        <a href="/bug-report">
             <i class="fa-solid fa-bug"></i>
             <span>Bug Report</span>
         </a>
-        <a href="http://localhost:3000/bug-report">
+        <a href="/bug-report">
             <i class="fa-solid fa-message"></i>
             <span>Send Feedback</span>
         </a>
     </div>
     <div class="mobile-menu-footer-section">
         <%if(user){ %> 
-            <button class="mobile-menu-buttons">Logout</button>
+            <button class="mobile-menu-buttons logout">Logout</button>
         <%}else{ %> 
-            <a class="mobile-menu-buttons" href="http://localhost:3000/auth">Join</a>
-            <a class="mobile-menu-buttons" href="http://localhost:3000/auth">Login</a>
+            <a class="mobile-menu-buttons" href="/auth/signup">Join</a>
+            <a class="mobile-menu-buttons" href="/auth/login">Login</a>
         <%} %> 
     </div>
 </div>

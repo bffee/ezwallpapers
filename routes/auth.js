@@ -8,7 +8,7 @@ const {loginUser} = require('../controllers/login-controller');
 const Router = express.Router();
 
 Router
-    .route('/')
+    .route('/:form')
     .get(handleGetAuthenticationPage)
     
 Router

@@ -1,9 +1,9 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {Users} = require('../models/users');
+const {JWT_SECERET} = require('../config/config');
 
 // Secret key for JWT
-const JWT_SECRET = 'abuzark';
 
 const signupUser = async (req, res) => {
 
@@ -49,7 +49,7 @@ const signupUser = async (req, res) => {
     await user.save();
 
     // Generate JWT token
-    const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '168h' });
+    const token = jwt.sign({ id: user._id }, JWT_SECERET, { expiresIn: '168h' });
 
     // Set the JWT as a cookie
     res.cookie('authToken', token, {
@@ -59,8 +59,7 @@ const signupUser = async (req, res) => {
     });
 
     // Respond with success
-    // res.status(201).json({ message: 'User registered successfully.' });
-    res.redirect('/')
+    res.json({ success: true });
   } catch (error) {
     console.log("error", error)
     res.status(500).json({ message: 'Internal server error.', error: error.message });

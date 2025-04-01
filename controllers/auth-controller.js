@@ -1,5 +1,9 @@
 function handleGetAuthenticationPage(req, res){
-    res.render("authentication", {user: req?.user});
+    if(req.params.form == 'signup'){
+        res.render("authentication", {user: req?.user, form: 'signup'});
+    }else{
+        res.render("authentication", {user: req?.user, form: 'login'});
+    }
 };
 
 module.exports = {handleGetAuthenticationPage}
