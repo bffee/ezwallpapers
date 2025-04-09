@@ -6,7 +6,7 @@
     <h3><span>Ez</span>Wallpapers</h3>
 </div>
 
-<form action="http://localhost:3000/" method="GET" class="search-box">
+<form action="/" method="GET" class="search-box">
     <input type="text" name="search" class="search-input" placeholder="Search" autocomplete="off">
     <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
@@ -16,8 +16,11 @@
         <button class="upload-button upload-wallpaper"><i class="fa-solid fa-upload"></i>Upload</button>
         <img class="dropdown-menu-trigger" src="<%=user.profilePicture%>" alt="profile"> 
     <% }else{ %>
-        <a href="http://localhost:3000/auth/signup">
-        <button class="signup-button">Join</button>
+        <button class="auth-btn" id="authToggle">Sign In</button>
+        <div class="auth-dropdown" id="authDropdown">
+          <a href="/auth/login">Log In</a>
+          <a href="/auth/signup">Sign Up</a>
+        </div>
     </a>
     <% } %>
     <button class="mobile-menu-open-button"><i class="fa-solid fa-bars"></i></button>    

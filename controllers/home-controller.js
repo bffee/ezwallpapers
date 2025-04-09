@@ -10,7 +10,7 @@ function fetchUsers(filter_fields, projection_fields){
 }
 
 async function handleGetHomePage(req, res){
-    let wallpapers_projection_fields = {source: 1, creator: 1}
+    let wallpapers_projection_fields = {source: 1, creator: 1, aspect_ratio: 1}
     let wallpapers_filter_fields = req?.query?.cursor ? {_id: {$gt: req.query.cursor}} : {};
 
     if(req.query.search){

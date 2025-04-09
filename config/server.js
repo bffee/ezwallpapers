@@ -24,10 +24,9 @@ function startServer(){
     app.set('view engine', 'ejs');
 
     app.use(express.static(path.join(__dirname, '../public//')))
-    // app.use('/stylesheets', express.static(path.join(__dirname, '../public/stylesheets')));
 
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: true }));
+    app.use(express.json({limit: "35mb"}));
+    app.use(express.urlencoded({ limit: "35mb", extended: true }));
 
     app.use(cookieParser())
 

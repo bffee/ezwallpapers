@@ -1,37 +1,46 @@
 <div class="box-container">
-    <img src="<%=wallpaper.source%> " alt="">
+    <img id="<%=wallpaper._id%>" src="<%=wallpaper.source%>" alt="">
 
     <div class="wallpaper-info-container">
         <div class="upload-info">
             <div class="user-info">
                 <a class="user-img" href="/profile/@<%=creator.username%>">
-                    <img id="<%=wallpaper._id%>" src="<%=creator.profilePicture %> " alt="">
+                    <img src="<%=creator.profilePicture %> " alt="">
                 </a>
-                <a class="user-name" href="/profile/@<%=creator.username%>"><%=`${creator.fname} ${creator.lname}`%></a>
+                <a class="user-name" href="/profile/@<%=creator.username%>">
+                    <%=`${creator.fname} ${creator.lname}`%>
+                </a>
             </div>
             <div class="options">
-                <button><i class="fa-solid fa-share"></i>Share</button>
-                <%if(owner){ %>
-                    <button id="edit-wallpaper"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                <%}else{%>
-                    <button id="report-wallpaper"><i class="fa-solid fa-circle-exclamation"></i>Report</button>
-                <%} %>   
+                <button class="download-button" wallpaper="<%=wallpaper._id%>"><i
+                        class="fa-solid fa-download"></i>Download</button>
+                <button class="more-options-btn" id="moreOptionsBtn"><i class="fa-solid fa-ellipsis"></i></button>
+                <div class="more-options-dropdown" id="moreOptionsDropdown">
+                    <a href="#" id="shareBtn" class="share-button">Share</a>
+                    <%if(owner){%>
+                        <a href="#" id="editBtn">Edit</a>
+                    <%}else{%>
+                        <a href="#" id="report-button">Report</a>
+                    <%} %>
+                    <a href="#" id="favoriteBtn">Favorite</a>
+                </div>
             </div>
         </div>
 
         <div class="wallpaper-details">
             <span><i class="fa-regular fa-calendar"></i>Downlaods <%=wallpaper.downloads %> </span>
-            <span><i class="fa-solid fa-download"></i>Uploaded on <%=new Date(wallpaper.created_at).toDateString() %> </span>
+            <span><i class="fa-solid fa-download"></i>Uploaded on <%=new Date(wallpaper.created_at).toDateString() %>
+            </span>
             <span><i class="fa-regular fa-circle-check"></i>Free to use under the licence of EzWallpapers</span>
         </div>
-        
-        <button class="download-button download-button-style" wallpaper="<%=wallpaper._id%>"><i class="fa-solid fa-arrow-down"></i></button>
 
         <div class="tags-container">
-            <%wallpaper.keywords.forEach(keyword => {%>
-                <a href="/?search=<%=keyword%>"><%=keyword%></a>
-            <%});%> 
-            <!-- <a href="">Animal</a>
+            <%wallpaper.keywords.forEach(keyword=> {%>
+                <a href="/?search=<%=keyword%>">
+                    <%=keyword%>
+                </a>
+                <%});%>
+                    <!-- <a href="">Animal</a>
             <a href="">Eagle</a>
             <a href="">Cute</a>
             <a href="">Badass</a>
